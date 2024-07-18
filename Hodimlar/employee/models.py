@@ -11,3 +11,7 @@ class Employee1(models.Model):
     tel = models.CharField(max_length=100)
     entered_date = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return f"{self.first_name} {self.last_name}"
+    
