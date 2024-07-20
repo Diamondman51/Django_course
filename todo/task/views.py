@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 
 from .models import Task
 
+
 # Create your views here.
 def tasks(req):
     not_completed = Task.objects.filter(is_completed=False).order_by('pk')
